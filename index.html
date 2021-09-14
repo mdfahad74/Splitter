@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Splitter</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>SPLI<div>
+      TTER
+    </div>
+  </h1>
+  <div class="container container-main">
+    <div class="row">
+      <div class="col-lg-6 inputs container">
+        <form id="form" action="#" method="post">
+          <div class="row">
+            <label>
+              <h5>Bill</h5>
+            </label>
+            <div class="input-group mb-3 bill">
+              <span class="input-group-text">$</span>
+              <input type="number" id="bill" class="form-control input-group-text" placeholder="0">
+            </div>
+          </div>
+          <div class="row">
+            <label>
+              <h5>Select Tip %</h5>
+            </label>
+            <div class="row">
+              <button type="button" class="col btn btn-primary btn-lg tip" value="5">
+                5%
+              </button>
+              <button type="button" class="col btn btn-primary btn-lg tip"  value="10">
+                10%
+              </button>
+              <button type="button" class="col btn btn-primary btn-lg tip" value="15">
+                15%
+              </button>
+            </div>
+            <div class="row">
+              <button type="button" class="col btn btn-primary btn-lg tip"  value="25">
+                25%
+              </button>
+              <button type="button" class="col btn btn-primary btn-lg tip"  value="50">
+                50%
+              </button>
+              <input type="text" class="col btn btn-primary btn-lg custom-btn tip custom-tip" value="" placeholder="Custom" onblur="change()">
+            </div>
+          </div>
+          <div class="row">
+            <label class="label">
+              <h5>Number Of People</h5>
+            </label>
+            <div class="input-group mb-3">
+              <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+              <input type="number" id="people" class="form-control input-group-text"  placeholder="0">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-6 results container">
+        <div class="row">
+          <div class="col">
+            <h5>Tip Amount</h5><br>
+            <p>/Person</p>
+          </div>
+          <div class="col">
+            <h5 class="tip-amount amount">$<a id="tip-main">0.00</a></h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h5>Total Amount</h5><br>
+            <p>/Person</p>
+          </div>
+          <div class="col">
+            <h5 class="total-amount amount">$<a id="total-main">0.00</a></h5>
+          </div>
+        </div>
+        <div class="d-grid gap-2">
+          <button class="btn btn-light reset-btn" id="reset" type="button">RESET</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- JavaScript -->
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>

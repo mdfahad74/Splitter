@@ -1,0 +1,79 @@
+body{
+  background-color: #c5e5e1;
+  letter-spacing: 3px;
+}
+
+h1{
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 5% 0;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.container{
+  background-color: white;
+  border-radius: 10px;
+  color: #1e5b56;
+}
+
+.container-main{
+  margin-bottom: 5%;
+}
+
+.results{
+  background-color: #064e4a;
+  padding: 2%;
+  color: white;
+}
+
+.row{
+  padding: 2%;
+}
+
+.inputs{
+  padding: 2%;
+}
+
+input[type='number']
+    {
+        text-align: right;
+    }
+
+.input-group-text{
+  background-color: #e3eff6;
+}
+
+.btn-primary{
+  background-color: #064e4a;
+  border: none;
+  margin: 2%;
+}
+
+.custom-btn{
+  background-color: #e3eff7;
+  color: #064e4a;
+}
+
+.btn-primary:hover{
+  background-color: #064e4a;
+  border: 0.5px solid black;
+}
+
+.amount{
+  text-align: center;
+  color: #38bba3;
+  font-size: 3rem;
+}
+
+.reset-btn{
+  margin-top: 30%;
+}
+
+.reset-btn:hover{
+  background-color: #38bba3;
+  border: 0.5px solid black;
+}
+
+.custom-tip{
+  text-align: center;
+}
