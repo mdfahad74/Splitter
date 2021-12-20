@@ -65,11 +65,16 @@ input[type='number']
   font-size: 3rem;
 }
 
-.reset-btn{
-  margin-top: 30%;
+.cal-btn{
+  margin-top: 20%;
+  margin-bottom: -20% ;
 }
 
-.reset-btn:hover{
+.reset-btn{
+  margin-top: 25%;
+}
+
+.buttons:hover{
   background-color: #38bba3;
   border: 0.5px solid black;
 }

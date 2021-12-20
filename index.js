@@ -1,47 +1,56 @@
-var arrBill = [];
-var arrTip = [];
-var arrPeople = [];
-var a="click";
-// INPUT
+let arrBill = [];
+let arrTip = [];
+let arrPeople = [];
+let a="blur";
+
 function change(){
-  a="change";
+  a="keyup";
 }
-var bill = Number($('#bill').on('change', function() {
+
+// INPUT
+
+let bill = Number($('#bill').on('change', function() {
   bill = Number($(this).val());
   arrBill.push(bill);
 }));
 
-var tip = Number($('.tip').on(a, function() {
+let tip = Number($('.tip').on(a, function() {
   tip = Number($(this).val());
   arrTip.push(tip);
 }));
 
-var people = Number($('#people').on('change', function() {
+let people = Number($('#people').on('change', function() {
   people = Number($(this).val());
   arrPeople.push(people);
 }));
 
 // CALCULATE
 
-var tipAmount = $('#tip-main').on('click', function() {
-  if(a=="change"){
-    tipAmount = Number(((arrBill[0] * arrTip[1]) / 100) / arrPeople[0]);
-    $(this).text(tipAmount);
-  }else{
-  tipAmount = Number(((arrBill[0] * arrTip[0]) / 100) / arrPeople[0]);
-  $(this).text(tipAmount);
-}
-})
+let tipAmount1 = 1;
+let totalAmount1 = 1;
 
-var totalAmount = $('#total-main').on('click', function() {
+$("#calculate").on("click", function(){
+  ab();
+  b();
+  $('#tip-main').text(tipAmount1);
+  $('#total-main').text(totalAmount1);
+});
+
+function ab() {
   if(a=="change"){
-    totalAmount = Number(((arrBill[0] / arrPeople[0]) + Number(((arrBill[0] * arrTip[1]) / 100) / arrPeople[0])));
-    $(this).text(totalAmount);
+    tipAmount1 = Number(((arrBill[0] * arrTip[1]) / 100) / arrPeople[0]);
   }else{
-  totalAmount = Number(((arrBill[0] / arrPeople[0]) + Number(((arrBill[0] * arrTip[0]) / 100) / arrPeople[0])));
-  $(this).text(totalAmount);
+  tipAmount1 = Number(((arrBill[0] * arrTip[0]) / 100) / arrPeople[0]);
+  }
 }
-})
+
+function b() {
+  if(a=="change"){
+    totalAmount1 = Number(((arrBill[0] / arrPeople[0]) + Number(((arrBill[0] * arrTip[1]) / 100) / arrPeople[0])));
+  }else{
+  totalAmount1 = Number(((arrBill[0] / arrPeople[0]) + Number(((arrBill[0] * arrTip[0]) / 100) / arrPeople[0])));
+  }
+}
 
 // RESET
 
